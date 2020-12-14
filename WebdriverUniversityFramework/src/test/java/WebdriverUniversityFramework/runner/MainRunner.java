@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		features = {"C:\\Users\\Dmitry\\git\\repository2\\WebdriverUniversityFramework\\src\\test\\java\\WebdriverUniversityFramework\\features"},
+		features = {"C:\\Users\\Dmitry\\git\\repository2\\WebdriverUniversityFramework\\src\\test\\java\\WebdriverUniversityFramework\\recources\\features"},
 		glue = {"stepDefinitions"},
 		dryRun = false,
 		plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"},
