@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import javax.imageio.stream.FileImageInputStream;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +13,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
 import pageObjects.BasePage;
+import pageObjects.ClickButtonsPage;
 import pageObjects.ContactUs_Page;
+import pageObjects.IndexPage;
 import pageObjects.Products_Page;
 
 public class DriverFactory {
@@ -23,6 +24,8 @@ public class DriverFactory {
 	public static Products_Page productsPage;
 	public static ContactUs_Page contactusPage;
 	public static BasePage basePage;
+	public static ClickButtonsPage clickButtonsPage;
+	public static IndexPage indexPage;
 
 	public WebDriver getDriver() {
 		try {
@@ -73,6 +76,8 @@ public class DriverFactory {
 			productsPage = PageFactory.initElements(driver, Products_Page.class);
 			contactusPage = PageFactory.initElements(driver, ContactUs_Page.class);
 			basePage = PageFactory.initElements(driver, BasePage.class);
+			clickButtonsPage = PageFactory.initElements(driver, ClickButtonsPage.class);
+			indexPage = PageFactory.initElements(driver, IndexPage.class);
 		}
 		
 		return driver;

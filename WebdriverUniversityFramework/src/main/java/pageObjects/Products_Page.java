@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import cucumber.api.DataTable;
 
 public class Products_Page extends BasePage{
 
