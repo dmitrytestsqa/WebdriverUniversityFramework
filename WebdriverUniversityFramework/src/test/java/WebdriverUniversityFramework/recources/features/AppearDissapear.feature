@@ -9,4 +9,4 @@ Then User sees special text for Cucumber BDD button
 When User clicks on the Automation testing button
 Then User sees special text for Automation testing button
 When User clicks on the Keep clicking button
-Then User sees special text for Automation testing button
+Then User sees special text for Keep clicking button

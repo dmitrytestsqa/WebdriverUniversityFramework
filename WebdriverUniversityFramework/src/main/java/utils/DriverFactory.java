@@ -11,7 +11,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.AppearDissapearPage;
 import pageObjects.BasePage;
 import pageObjects.ClickButtonsPage;
 import pageObjects.ContactUs_Page;
@@ -20,12 +22,14 @@ import pageObjects.Products_Page;
 
 public class DriverFactory {
 
+	public static AppearDissapearPage appearDissapearPage;
 	public static WebDriver driver;
 	public static Products_Page productsPage;
 	public static ContactUs_Page contactusPage;
 	public static BasePage basePage;
 	public static ClickButtonsPage clickButtonsPage;
 	public static IndexPage indexPage;
+	public static WebDriverWait wait;
 
 	public WebDriver getDriver() {
 		try {
@@ -78,6 +82,8 @@ public class DriverFactory {
 			basePage = PageFactory.initElements(driver, BasePage.class);
 			clickButtonsPage = PageFactory.initElements(driver, ClickButtonsPage.class);
 			indexPage = PageFactory.initElements(driver, IndexPage.class);
+			appearDissapearPage = PageFactory.initElements(driver, AppearDissapearPage.class);
+			wait = new WebDriverWait(driver, 15);
 		}
 		
 		return driver;
