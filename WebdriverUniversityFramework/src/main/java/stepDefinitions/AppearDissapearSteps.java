@@ -12,7 +12,7 @@ public class AppearDissapearSteps extends DriverFactory{
 	@Given("^User opens index page and clicks on the AccordionTextAffects button$")
 	public void user_opens_index_page_and_clicks_on_the_AccordionTextAffects_button() throws Throwable {
 		getDriver().get("http://webdriveruniversity.com/");
-		indexPage.clickButton(indexPage.accordionButton);
+		indexPage.clickButton(indexPage.accordionLink);
 		
 	}
 

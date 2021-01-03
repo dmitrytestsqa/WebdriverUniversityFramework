@@ -13,10 +13,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import gherkin.lexer.Pa;
 import pageObjects.AppearDissapearPage;
 import pageObjects.BasePage;
 import pageObjects.ClickButtonsPage;
 import pageObjects.ContactUs_Page;
+import pageObjects.DropdwnCheckboxRadioPage;
 import pageObjects.IndexPage;
 import pageObjects.Products_Page;
 
@@ -29,6 +31,7 @@ public class DriverFactory {
 	public static BasePage basePage;
 	public static ClickButtonsPage clickButtonsPage;
 	public static IndexPage indexPage;
+	public static DropdwnCheckboxRadioPage dropdwnCheckboxRadio;
 	public static WebDriverWait wait;
 
 	public WebDriver getDriver() {
@@ -83,6 +86,7 @@ public class DriverFactory {
 			clickButtonsPage = PageFactory.initElements(driver, ClickButtonsPage.class);
 			indexPage = PageFactory.initElements(driver, IndexPage.class);
 			appearDissapearPage = PageFactory.initElements(driver, AppearDissapearPage.class);
+			dropdwnCheckboxRadio = PageFactory.initElements(driver,  DropdwnCheckboxRadioPage.class);
 			wait = new WebDriverWait(driver, 15);
 		}
 		

@@ -13,7 +13,8 @@ public class IndexPage extends BasePage {
 	}
 
 	public @FindBy(css = "div.col-md-12 a#button-clicks") WebElement buttonClicksButton;
-	public @FindBy(xpath = "//h1[text()='ACCORDION & TEXT AFFECTS (APPEAR & DISAPPEAR)']") WebElement accordionButton;
+	public @FindBy(xpath = "//h1[text()='ACCORDION & TEXT AFFECTS (APPEAR & DISAPPEAR)']") WebElement accordionLink;
+	public @FindBy(xpath = "//h1[text()='DROPDOWN, CHECKBOXE(S) & RADIO BUTTON(S)']") WebElement dropDownLink;
 	
 	public IndexPage clickButton(WebElement element) throws IOException {
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
