@@ -19,7 +19,7 @@ public class ClickButtonsPage extends BasePage{
 	}
 	
 	public String webElementMessage = "Congratulations!";
-	public String javaScriptMessage = "It’s that Easy!! Well I think it is.....";
+	public String javaScriptMessage = "It/’/s that Easy!! Well I think it is.....";
 	public String actionMoveMessage = "Well done! the Action Move & Click can become very useful!";
 
 	public @FindBy (css = "span#button1") WebElement webElementClickButton;
